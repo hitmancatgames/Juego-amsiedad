@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Floppa" type="AnimatedSprite"]
+position = Vector2( 221, 894 )
+scale = Vector2( 0.553571, 0.397403 )
+frames = SubResource( 1 )
