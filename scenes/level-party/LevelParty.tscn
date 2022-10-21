@@ -16,6 +16,7 @@ texture = ExtResource( 2 )
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_bottom = 1.0
 margin_right = 1112.0
+alignment = 1
 
 [node name="RespButton" type="TextureButton" parent="HBoxContainer"]
 margin_right = 182.0
