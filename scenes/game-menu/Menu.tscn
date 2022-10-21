@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/game-menu/menu_button_1.png" type="Texture" id=1]
 [ext_resource path="res://assets/game-menu/menu_bg.png" type="Texture" id=2]
 [ext_resource path="res://scenes/game-menu/Menu.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource( 3 )
@@ -32,6 +40,10 @@ margin_top = 302.0
 margin_right = 182.0
 margin_bottom = 449.0
 texture_normal = ExtResource( 1 )
+
+[node name="Name" type="AnimatedSprite" parent="ContainerButtons"]
+frames = SubResource( 1 )
+playing = true
 
 [connection signal="pressed" from="ContainerButtons/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="ContainerButtons/CreditsButton" to="." method="_on_CreditsButton_pressed"]
