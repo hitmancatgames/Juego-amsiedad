@@ -49,7 +49,7 @@ margin_bottom = 449.0
 texture_normal = ExtResource( 1 )
 
 [node name="Name" type="AnimatedSprite" parent="ContainerButtons"]
-position = Vector2( 938, 294 )
+position = Vector2( 993, 300 )
 frames = SubResource( 1 )
 animation = "change-name"
 frame = 3
