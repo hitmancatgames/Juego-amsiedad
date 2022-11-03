@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/splashscreen/hitmancat_logo.png" type="Texture" id=1]
+[ext_resource path="res://assets/game-menu/HitmanCat LOGO.png" type="Texture" id=1]
 [ext_resource path="res://scenes/splashscreen/SplashScreen.gd" type="Script" id=2]
 
-[node name="SplashScreenBG" type="Sprite"]
-position = Vector2( 998, 545 )
+[node name="HitmanCatLogo" type="Sprite"]
+position = Vector2( 970, 1251 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 

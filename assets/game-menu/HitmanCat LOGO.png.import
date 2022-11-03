@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_button_1.png-39c60870f9fa6277b9ef891dda69b8de.stex"
+path="res://.import/HitmanCat LOGO.png-a0bfa7851856807eda37b24c9aec3014.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game-menu/menu_button_1.png"
-dest_files=[ "res://.import/menu_button_1.png-39c60870f9fa6277b9ef891dda69b8de.stex" ]
+source_file="res://assets/game-menu/HitmanCat LOGO.png"
+dest_files=[ "res://.import/HitmanCat LOGO.png-a0bfa7851856807eda37b24c9aec3014.stex" ]
 
 [params]
 
