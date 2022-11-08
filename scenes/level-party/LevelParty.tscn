@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/cheems/Cheems.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/level-party/level_party_bg.png" type="Texture" id=2]
+[ext_resource path="res://scenes/level-party/LevelParty.gd" type="Script" id=4]
+[ext_resource path="res://scenes/floppa/Floppa.tscn" type="PackedScene" id=5]
+
+[node name="LevelParty" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="LevelBG" type="Sprite" parent="."]
+position = Vector2( 956, 536 )
+texture = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_bottom = 1.0
+margin_right = 1112.0
+alignment = 1
+
+[node name="RespButton" type="TextureButton" parent="HBoxContainer"]
+margin_left = 546.0
+margin_right = 546.0
+
+[node name="RespButton2" type="TextureButton" parent="HBoxContainer"]
+margin_left = 550.0
+margin_right = 550.0
+
+[node name="RespButton3" type="TextureButton" parent="HBoxContainer"]
+margin_left = 554.0
+margin_right = 554.0
+
+[node name="RespButton4" type="TextureButton" parent="HBoxContainer"]
+margin_left = 558.0
+margin_right = 558.0
+
+[node name="RespButton5" type="TextureButton" parent="HBoxContainer"]
+margin_left = 562.0
+margin_right = 562.0
+
+[node name="RespButton6" type="TextureButton" parent="HBoxContainer"]
+margin_left = 566.0
+margin_right = 566.0
+
+[node name="Floppa" parent="." instance=ExtResource( 5 )]
+
+[node name="FloppaDialog" type="Label" parent="."]
+margin_left = 417.0
+margin_top = 758.0
+margin_right = 892.0
+margin_bottom = 926.0
+text = "Inserte texto con cosas que debería decir el floppa"
+uppercase = true
+
+[node name="Cheems" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1701, 937 )
+scale = Vector2( 0.332456, 0.313202 )
+
+[node name="CheemsDialog" type="Label" parent="."]
+margin_left = 1011.0
+margin_top = 960.0
+margin_right = 1470.0
+margin_bottom = 974.0
+text = "INSERTE DIALOGO DEL CHEEMS"
+uppercase = true
+
+[connection signal="pressed" from="HBoxContainer/RespButton" to="." method="_on_RespButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/RespButton2" to="." method="_on_RespButton2_pressed"]
+[connection signal="pressed" from="HBoxContainer/RespButton3" to="." method="_on_RespButton3_pressed"]
+[connection signal="pressed" from="HBoxContainer/RespButton4" to="." method="_on_RespButton4_pressed"]
+[connection signal="pressed" from="HBoxContainer/RespButton5" to="." method="_on_RespButton5_pressed"]
+[connection signal="pressed" from="HBoxContainer/RespButton6" to="." method="_on_RespButton6_pressed"]
