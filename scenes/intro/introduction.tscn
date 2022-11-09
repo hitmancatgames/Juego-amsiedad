@@ -1,23 +1,297 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://scenes/intro/introduction.gd" type="Script" id=3]
+[ext_resource path="res://assets/game-menu/MenuBackground.png" type="Texture" id=1]
+[ext_resource path="res://assets/level-party/floor_party.png" type="Texture" id=2]
+[ext_resource path="res://assets/level-party/party_people.png" type="Texture" id=3]
+[ext_resource path="res://scenes/intro/Introduction.gd" type="Script" id=4]
+[ext_resource path="res://assets/level-party/wall_2_party.png" type="Texture" id=5]
+[ext_resource path="res://assets/level-party/player_happy.png" type="Texture" id=6]
+[ext_resource path="res://assets/level-party/wall_1_party.png" type="Texture" id=7]
+[ext_resource path="res://assets/level-party/party_people_v2.png" type="Texture" id=8]
+[ext_resource path="res://assets/cheems/player_cry_phone.png" type="Texture" id=9]
+[ext_resource path="res://assets/cheems/player_cry1.png" type="Texture" id=10]
+[ext_resource path="res://assets/cheems/player_cry2.png" type="Texture" id=11]
+[ext_resource path="res://assets/cheems/player_normal.png" type="Texture" id=12]
+[ext_resource path="res://assets/fonts/dialogue_text.tres" type="DynamicFont" id=13]
+[ext_resource path="res://assets/UI/globeTwo.png" type="Texture" id=14]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="Animation" id=1]
+resource_name = "Chems_dance"
+length = 2.0
+loop = true
+step = 0.333333
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelBG/PlayerHappy:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.333, 0.999, 1.665 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 36.4, -36.3, 21.9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LevelBG/PartyPeople:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.333333, 0.666667, 1, 1.33333, 1.66667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 83, 231 ), Vector2( -82, 345 ), Vector2( 72, 184 ), Vector2( -36, 401 ), Vector2( -91, 180 ), Vector2( 80, 350 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Party"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelBG/FloorParty:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5, 982 ), Vector2( 0, 173 ), Vector2( 0, 259 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LevelBG/Wall2Party:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 84, -935 ), Vector2( 115, -194 ), Vector2( 75, -252 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LevelBG/Wall1Party:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1212, -89 ), Vector2( -742, -14 ), Vector2( -806, -82 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LevelBG/PlayerHappy:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2159, 21 ), Vector2( -413, 39 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LevelBG/PartyPeople:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 33, 1186 ), Vector2( 83, 174 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelBG/FloorParty:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 982 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LevelBG/Wall2Party:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 84, -935 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LevelBG/Wall1Party:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1212, -89 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LevelBG/PlayerHappy:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2159, 21 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("LevelBG/PlayerHappy:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LevelBG/PartyPeople:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 33, 1186 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "people_dance"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("LevelBG/PartyPeople:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 83, 231 ), Vector2( -84, 171 ), Vector2( 98, 185 ), Vector2( -81, 301 ) ]
+}
+
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "cry",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "cry2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "cryCel",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "happy",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "default",
-"speed": 1.0
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "green",
+"speed": 5.0
 } ]
 
 [node name="Introduction" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource( 4 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 961, 537 )
-frames = SubResource( 1 )
-playing = true
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Chems_dance = SubResource( 1 )
+anims/Party = SubResource( 2 )
+anims/RESET = SubResource( 3 )
+anims/people_dance = SubResource( 4 )
 
-[node name="BG" type="Sprite" parent="."]
+[node name="LevelBG" type="Sprite" parent="."]
+position = Vector2( 963, 545 )
+texture = ExtResource( 1 )
 
-[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[node name="FloorParty" type="Sprite" parent="LevelBG"]
+position = Vector2( 5, 982 )
+texture = ExtResource( 2 )
+
+[node name="Wall2Party" type="Sprite" parent="LevelBG"]
+position = Vector2( 84, -935 )
+texture = ExtResource( 5 )
+
+[node name="Wall1Party" type="Sprite" parent="LevelBG"]
+position = Vector2( -1212, -89 )
+texture = ExtResource( 7 )
+
+[node name="PlayerHappy" type="AnimatedSprite" parent="LevelBG"]
+position = Vector2( -2159, 21 )
+frames = SubResource( 6 )
+animation = "happy"
+
+[node name="PartyPeople" type="AnimatedSprite" parent="LevelBG"]
+position = Vector2( 33, 1186 )
+scale = Vector2( 1.1, 1.1 )
+frames = SubResource( 5 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="helpDialogue" type="Sprite" parent="."]
+position = Vector2( 1085, 339 )
+texture = ExtResource( 14 )
+
+[node name="Label" type="Label" parent="helpDialogue"]
+margin_left = -125.0
+margin_top = -53.0
+margin_right = 170.0
+margin_bottom = 66.0
+custom_colors/font_color = Color( 0.227451, 0.227451, 0.227451, 1 )
+custom_fonts/font = ExtResource( 13 )
+text = "ASHUDA"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
