@@ -31,5 +31,6 @@ func _on_Timer_timeout():
 		$helpDialogue.show()
 	elif timerCalls == 4:
 		$Timer.stop()
+		get_tree().change_scene("res://scenes/level-party/LevelParty.tscn")
 	timerCalls += 1
 	pass 

@@ -1,58 +1,159 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=15 format=2]
 
+[ext_resource path="res://assets/UI/globeThree.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/Candy Beans.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/level-party/player_call_icon.png" type="Texture" id=3]
 [ext_resource path="res://scenes/level-party/LevelParty.gd" type="Script" id=4]
+[ext_resource path="res://assets/level-party/player_call_icon_black.png" type="Texture" id=5]
+[ext_resource path="res://assets/level-party/text_container_1.png" type="Texture" id=6]
+[ext_resource path="res://assets/level-party/text_container_2.png" type="Texture" id=7]
+[ext_resource path="res://assets/UI/globeOne.png" type="Texture" id=8]
+[ext_resource path="res://assets/level-party/npc_call_icon.png" type="Texture" id=9]
+[ext_resource path="res://assets/level-party/npc_call_icon_black.png" type="Texture" id=10]
+[ext_resource path="res://assets/level-party/party_background_call_scene.png" type="Texture" id=11]
+[ext_resource path="res://assets/UI/globeTwo.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
+font_data = ExtResource( 2 )
 
 [node name="LevelParty" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-anchor_bottom = 1.0
-margin_right = 1112.0
-alignment = 1
+[node name="PartyBackgroundCallScene" type="Sprite" parent="."]
+position = Vector2( 960, 541 )
+texture = ExtResource( 11 )
 
-[node name="RespButton" type="TextureButton" parent="HBoxContainer"]
-margin_left = 546.0
-margin_right = 546.0
+[node name="DialogueOptions" type="Node2D" parent="."]
+visible = false
 
-[node name="RespButton2" type="TextureButton" parent="HBoxContainer"]
-margin_left = 550.0
-margin_right = 550.0
+[node name="GlobeOne" type="Sprite" parent="DialogueOptions"]
+position = Vector2( 933, 266 )
+rotation = -0.255348
+scale = Vector2( 2, 2 )
+texture = ExtResource( 8 )
+flip_h = true
 
-[node name="RespButton3" type="TextureButton" parent="HBoxContainer"]
-margin_left = 554.0
-margin_right = 554.0
+[node name="Label" type="Label" parent="DialogueOptions/GlobeOne"]
+margin_left = -112.0
+margin_top = -73.0
+margin_right = 114.0
+margin_bottom = 77.0
+custom_colors/font_color = Color( 0.145098, 0.145098, 0.145098, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ASHUDA"
+align = 1
+valign = 1
+autowrap = true
 
-[node name="RespButton4" type="TextureButton" parent="HBoxContainer"]
-margin_left = 558.0
-margin_right = 558.0
+[node name="GlobeTwo" type="Sprite" parent="DialogueOptions"]
+position = Vector2( 828, 729 )
+rotation = 0.328146
+texture = ExtResource( 12 )
 
-[node name="RespButton5" type="TextureButton" parent="HBoxContainer"]
-margin_left = 562.0
-margin_right = 562.0
+[node name="Label" type="Label" parent="DialogueOptions/GlobeTwo"]
+margin_left = -196.0
+margin_top = -147.0
+margin_right = 206.0
+margin_bottom = 143.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ASHUDA"
+align = 1
+valign = 1
+autowrap = true
 
-[node name="RespButton6" type="TextureButton" parent="HBoxContainer"]
-margin_left = 566.0
-margin_right = 566.0
+[node name="GlobeThree" type="Sprite" parent="DialogueOptions"]
+position = Vector2( 1399, 622 )
+rotation = 0.314491
+texture = ExtResource( 1 )
+flip_h = true
 
-[node name="FloppaDialog" type="Label" parent="."]
-margin_left = 417.0
-margin_top = 718.0
-margin_right = 892.0
-margin_bottom = 886.0
-text = "Inserte texto con cosas que debería decir el floppa"
-uppercase = true
+[node name="Label" type="Label" parent="DialogueOptions/GlobeThree"]
+margin_left = -264.0
+margin_top = -206.0
+margin_right = 257.0
+margin_bottom = 156.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ASHUDA"
+align = 1
+valign = 1
+autowrap = true
 
-[node name="CheemsDialog" type="Label" parent="."]
-margin_left = 1011.0
-margin_top = 960.0
-margin_right = 1470.0
-margin_bottom = 974.0
+[node name="GlobeFour" type="Sprite" parent="DialogueOptions"]
+position = Vector2( 399, 379 )
+rotation = -0.524585
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="DialogueOptions/GlobeFour"]
+margin_left = -197.0
+margin_top = -144.0
+margin_right = 213.0
+margin_bottom = 166.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ASHUDA"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="DialogueCall" type="Node2D" parent="."]
+
+[node name="PlayerCallIconBlack" type="Sprite" parent="DialogueCall"]
+position = Vector2( 314, 831 )
+texture = ExtResource( 5 )
+
+[node name="TextContainer2" type="Sprite" parent="DialogueCall"]
+modulate = Color( 1, 1, 1, 0.807843 )
+position = Vector2( 1065, 831 )
+texture = ExtResource( 7 )
+
+[node name="CheemsDialog" type="Label" parent="DialogueCall/TextContainer2"]
+margin_left = -590.0
+margin_top = -141.0
+margin_right = 716.0
+margin_bottom = 116.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "INSERTE DIALOGO DEL CHEEMS"
+align = 1
+valign = 1
+autowrap = true
 uppercase = true
 
-[connection signal="pressed" from="HBoxContainer/RespButton" to="." method="_on_RespButton_pressed"]
-[connection signal="pressed" from="HBoxContainer/RespButton2" to="." method="_on_RespButton2_pressed"]
-[connection signal="pressed" from="HBoxContainer/RespButton3" to="." method="_on_RespButton3_pressed"]
-[connection signal="pressed" from="HBoxContainer/RespButton4" to="." method="_on_RespButton4_pressed"]
-[connection signal="pressed" from="HBoxContainer/RespButton5" to="." method="_on_RespButton5_pressed"]
-[connection signal="pressed" from="HBoxContainer/RespButton6" to="." method="_on_RespButton6_pressed"]
+[node name="PlayerCallIcon" type="Sprite" parent="DialogueCall"]
+position = Vector2( 274, 880 )
+texture = ExtResource( 3 )
+
+[node name="NpcCallIconBlack" type="Sprite" parent="DialogueCall"]
+position = Vector2( 1662, 189 )
+texture = ExtResource( 10 )
+
+[node name="TextContainer1" type="Sprite" parent="DialogueCall"]
+modulate = Color( 1, 1, 1, 0.85098 )
+position = Vector2( 943, 206 )
+texture = ExtResource( 6 )
+
+[node name="FloppaDialog" type="Label" parent="DialogueCall/TextContainer1"]
+margin_left = -640.0
+margin_top = -129.0
+margin_right = 604.0
+margin_bottom = 93.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Inserte texto con cosas que debería decir el floppa"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+
+[node name="NpcCallIcon" type="Sprite" parent="DialogueCall"]
+position = Vector2( 1688, 191 )
+texture = ExtResource( 9 )
