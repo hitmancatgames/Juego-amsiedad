@@ -8,7 +8,7 @@ var correct = false
 var CDialogue1 = "Aló? Me escuchas bien? Hay demasiado ruido..."
 var CDialogue2 = "Eemm, eeeh... no me siento bien. De repente, todo se ve... se siente enorme. O yo estoy pequeñito? Aaagh es muy ruidoso!"
 # C DE CHEMSITO
-var FDialogue1 = "Aló, te escucho. Veo que finalmente decidiste ir a la fiesta. Pasa algo?"
+var FDialogue1 = "Aló, te escucho. Veo que finalmente decidiste ir a la fiesta. ¿Pasa algo?"
 var FDialogue2 = "Ey, te escucho agitado. Despacio, dime ¿Qué sientes?"
 # F DE FLOOPA
 
