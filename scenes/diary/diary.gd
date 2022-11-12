@@ -1,4 +1,4 @@
-extends Sprite
+extends Node2D
 
 var septdialog15 = "15 de Semtiembre 2022. Querimdo Diariom… Me compartieron un link a un cover de un cumbión muy popular, uno que le gusta mucho a la abuela de Floopa, está cantado en japonés. Un par de días después de escucharlo ya me sé la lemtra. Ahora podré disfrutar un poquito más de las reuniones navideñas con la familia de Floopa."
 

@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/level-party/player_call_icon_black.png" type="Texture" id=5]
 [ext_resource path="res://assets/level-party/text_container_1.png" type="Texture" id=6]
 [ext_resource path="res://assets/level-party/text_container_2.png" type="Texture" id=7]
-[ext_resource path="res://assets/UI/globeOne.png" type="Texture" id=8]
 [ext_resource path="res://assets/level-party/npc_call_icon.png" type="Texture" id=9]
 [ext_resource path="res://assets/level-party/npc_call_icon_black.png" type="Texture" id=10]
 [ext_resource path="res://assets/level-party/party_background_call_scene.png" type="Texture" id=11]
@@ -23,6 +22,11 @@ size = 50
 outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=3]
+size = 37
+outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
+font_data = ExtResource( 2 )
+
 [node name="LevelParty" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -31,20 +35,25 @@ position = Vector2( 960, 541 )
 texture = ExtResource( 11 )
 
 [node name="DialogueOptions" type="Node2D" parent="."]
-visible = false
 
-[node name="GlobeOne" type="Sprite" parent="DialogueOptions"]
-position = Vector2( 933, 266 )
-rotation = -0.255348
-scale = Vector2( 2, 2 )
-texture = ExtResource( 8 )
+[node name="GlobeOne" type="TextureButton" parent="DialogueOptions"]
+margin_left = 670.0
+margin_top = 394.0
+margin_right = 1248.0
+margin_bottom = 827.0
+rect_rotation = 30.3525
+texture_normal = ExtResource( 1 )
 flip_h = true
 
 [node name="Label" type="Label" parent="DialogueOptions/GlobeOne"]
-margin_left = -112.0
-margin_top = -73.0
-margin_right = 114.0
-margin_bottom = 77.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -113.0
+margin_top = -75.0
+margin_right = 113.0
+margin_bottom = 75.0
 custom_colors/font_color = Color( 0.145098, 0.145098, 0.145098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "ASHUDA"
@@ -52,34 +61,23 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="GlobeTwo" type="Sprite" parent="DialogueOptions"]
-position = Vector2( 828, 729 )
-rotation = 0.328146
-texture = ExtResource( 12 )
-
-[node name="Label" type="Label" parent="DialogueOptions/GlobeTwo"]
-margin_left = -196.0
-margin_top = -147.0
-margin_right = 206.0
-margin_bottom = 143.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "ASHUDA"
-align = 1
-valign = 1
-autowrap = true
-
-[node name="GlobeThree" type="Sprite" parent="DialogueOptions"]
-position = Vector2( 1399, 622 )
-rotation = 0.314491
-texture = ExtResource( 1 )
+[node name="GlobeTwo" type="TextureButton" parent="DialogueOptions"]
+margin_left = 835.0
+margin_top = 93.0
+margin_right = 1413.0
+margin_bottom = 526.0
+texture_normal = ExtResource( 1 )
 flip_h = true
 
-[node name="Label" type="Label" parent="DialogueOptions/GlobeThree"]
-margin_left = -264.0
-margin_top = -206.0
-margin_right = 257.0
-margin_bottom = 156.0
+[node name="Label" type="Label" parent="DialogueOptions/GlobeTwo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -201.0
+margin_top = -145.0
+margin_right = 201.0
+margin_bottom = 145.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "ASHUDA"
@@ -87,16 +85,48 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="GlobeFour" type="Sprite" parent="DialogueOptions"]
-position = Vector2( 399, 379 )
-rotation = -0.524585
-texture = ExtResource( 12 )
+[node name="GlobeThree" type="TextureButton" parent="DialogueOptions"]
+margin_left = 1232.0
+margin_top = 438.0
+margin_right = 1705.0
+margin_bottom = 810.0
+rect_rotation = 17.3644
+texture_normal = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="DialogueOptions/GlobeThree"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.0
+margin_top = -93.0
+margin_right = 144.0
+margin_bottom = 93.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ASHUDA"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="GlobeFour" type="TextureButton" parent="DialogueOptions"]
+margin_left = 230.0
+margin_top = 186.0
+margin_right = 703.0
+margin_bottom = 558.0
+rect_rotation = -16.9326
+texture_normal = ExtResource( 12 )
 
 [node name="Label" type="Label" parent="DialogueOptions/GlobeFour"]
-margin_left = -197.0
-margin_top = -144.0
-margin_right = 213.0
-margin_bottom = 166.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -152.738
+margin_top = -80.0097
+margin_right = 105.262
+margin_bottom = 92.9903
+rect_rotation = -10.8449
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "ASHUDA"
@@ -104,56 +134,76 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="DialogueCall" type="Node2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PlayerCallIconBlack" type="Sprite" parent="DialogueCall"]
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="Control"]
+texture = ExtResource( 11 )
+offset = Vector2( 959, 540 )
+
+[node name="DialogueCall" type="VBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="PlayerCallIconBlack" type="Sprite" parent="Control/DialogueCall"]
 position = Vector2( 314, 831 )
 texture = ExtResource( 5 )
 
-[node name="TextContainer2" type="Sprite" parent="DialogueCall"]
+[node name="TextContainer2" type="Sprite" parent="Control/DialogueCall"]
 modulate = Color( 1, 1, 1, 0.807843 )
 position = Vector2( 1065, 831 )
 texture = ExtResource( 7 )
 
-[node name="CheemsDialog" type="Label" parent="DialogueCall/TextContainer2"]
+[node name="CheemsDialog" type="Label" parent="Control/DialogueCall/TextContainer2"]
+unique_name_in_owner = true
 margin_left = -590.0
 margin_top = -141.0
-margin_right = 716.0
+margin_right = 681.0
 margin_bottom = 116.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "INSERTE DIALOGO DEL CHEEMS"
 align = 1
 valign = 1
 autowrap = true
 uppercase = true
 
-[node name="PlayerCallIcon" type="Sprite" parent="DialogueCall"]
+[node name="PlayerCallIcon" type="Sprite" parent="Control/DialogueCall"]
 position = Vector2( 274, 880 )
 texture = ExtResource( 3 )
 
-[node name="NpcCallIconBlack" type="Sprite" parent="DialogueCall"]
+[node name="NpcCallIconBlack" type="Sprite" parent="Control/DialogueCall"]
 position = Vector2( 1662, 189 )
 texture = ExtResource( 10 )
 
-[node name="TextContainer1" type="Sprite" parent="DialogueCall"]
+[node name="TextContainer1" type="Sprite" parent="Control/DialogueCall"]
 modulate = Color( 1, 1, 1, 0.85098 )
 position = Vector2( 943, 206 )
 texture = ExtResource( 6 )
 
-[node name="FloppaDialog" type="Label" parent="DialogueCall/TextContainer1"]
-margin_left = -640.0
+[node name="FloppaDialog" type="Label" parent="Control/DialogueCall/TextContainer1"]
+unique_name_in_owner = true
+margin_left = -561.0
 margin_top = -129.0
-margin_right = 604.0
+margin_right = 544.0
 margin_bottom = 93.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Inserte texto con cosas que debería decir el floppa"
+custom_fonts/font = SubResource( 3 )
 align = 1
 valign = 1
 autowrap = true
 uppercase = true
 
-[node name="NpcCallIcon" type="Sprite" parent="DialogueCall"]
+[node name="NpcCallIcon" type="Sprite" parent="Control/DialogueCall"]
 position = Vector2( 1688, 191 )
 texture = ExtResource( 9 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+root_node = NodePath("../..")
+
+[connection signal="button_down" from="DialogueOptions/GlobeOne" to="." method="_on_GlobeOne_button_down"]
+[connection signal="button_down" from="DialogueOptions/GlobeTwo" to="." method="_on_GlobeTwo_button_down"]
+[connection signal="button_down" from="DialogueOptions/GlobeThree" to="." method="_on_GlobeThree_button_down"]
+[connection signal="button_down" from="DialogueOptions/GlobeFour" to="." method="_on_GlobeFour_button_down"]
