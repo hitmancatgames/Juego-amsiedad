@@ -6,8 +6,8 @@
 [ext_resource path="res://assets/cheems/player_cry_phone.png" type="Texture" id=4]
 [ext_resource path="res://assets/cheems/player_cry1.png" type="Texture" id=5]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 15.5 )
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 170.833, 315.833 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -32,11 +32,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 183.5, 319 )
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 159.5
+height = 277.667
 
 [node name="Cheems" type="KinematicBody2D"]
-position = Vector2( 960, 536 )
+position = Vector2( 950, 534 )
 scale = Vector2( 0.6, 0.6 )
 script = ExtResource( 3 )
 __meta__ = {
@@ -44,9 +45,8 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0, -5.5 )
-shape = SubResource( 1 )
+position = Vector2( -10.8333, 130.833 )
+shape = SubResource( 4 )
 
 [node name="Cheems" type="AnimatedSprite" parent="."]
 position = Vector2( -5, 136 )
@@ -58,7 +58,4 @@ frames = SubResource( 2 )
 position = Vector2( -9.5, 135 )
 shape = SubResource( 3 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
