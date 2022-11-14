@@ -34,6 +34,10 @@ font_data = ExtResource( 3 )
 
 [node name="Street" type="Node2D" groups=["Street"]]
 script = ExtResource( 7 )
+__meta__ = {
+"_edit_horizontal_guides_": [ -1250.0, -2002.0, -3502.0, -5008.0, -5346.0, -6219.0 ],
+"_edit_vertical_guides_": [ 502.0, 751.0, 999.0, 1249.0 ]
+}
 
 [node name="StreetBG" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
@@ -109,6 +113,33 @@ one_shot = true
 autostart = true
 
 [node name="Enemy" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 1216, 166 )
+position = Vector2( 1249, -1250 )
+
+[node name="Enemy3" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 504, -2001 )
+
+[node name="Enemy2" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 998, -2000 )
+
+[node name="Enemy4" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 764, -3165 )
+
+[node name="Enemy5" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1260, -5002 )
+
+[node name="Enemy6" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 773, -4146 )
+
+[node name="Enemy7" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 997, -5876 )
+
+[node name="Enemy8" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 501, -6209 )
+
+[node name="Enemy9" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 748, -7520 )
+
+[node name="Enemy10" parent="." groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1256, -7731 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
