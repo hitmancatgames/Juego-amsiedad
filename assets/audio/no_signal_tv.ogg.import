@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/no_signal_tv.ogg-3b01b8a0c9aed8936b54e2274c87e904.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/no_signal_tv.ogg"
+dest_files=[ "res://.import/no_signal_tv.ogg-3b01b8a0c9aed8936b54e2274c87e904.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
