@@ -10,6 +10,8 @@ var octdialog8 = "8 de Octumbre 2022. Querimdo Diariom… Finalmemte fui a la fi
 var animation = true
 
 func _ready():
+	GlobalMusic._play_default_music()
+	GlobalMusic._turn_up_volume()
 	$DiaryVisibleQuote.play("fadeIN") 
 pass
 

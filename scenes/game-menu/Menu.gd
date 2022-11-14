@@ -1,6 +1,10 @@
 extends Node2D
-
 var animationON = false
+
+func _ready():
+	if GlobalMusic.CountMusic == 0:
+		GlobalMusic._play_menu_music()
+	pass
 
 func _on_PlayButton_pressed():
 	get_tree().change_scene("res://scenes/intro/Introduction.tscn")

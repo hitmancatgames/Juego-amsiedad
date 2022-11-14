@@ -11,5 +11,5 @@ dest_files=[ "res://.import/minigame_dialog.ogg-b086c9b03ed75c1d57229a9e6de9c94b
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
