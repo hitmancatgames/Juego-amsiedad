@@ -54,9 +54,10 @@ var RightButton5 = "Quiero irme a casa. Puedes venir a buscarme?"
 
 
 func _ready():
+	GlobalMusic._turn_down_volume()
 	$"%CheemsDialog".set_text(str(CDialogue1))
 	$Control/DialogueCall/TextContainer1.hide()
-	pass 	
+	pass
 	
 func _input(event):
 	if event.is_action_released("ui_accept"):

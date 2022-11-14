@@ -5,6 +5,7 @@ var correct = false
 var timerCalls = 0
 
 func _ready():
+	GlobalMusic._play_party_music()
 	$helpDialogue.hide()
 	$AnimationPlayer.play("Party")
 	pass 

@@ -12,7 +12,10 @@ config_version=4
 
 config/name="Juego-amsiedad"
 run/main_scene="res://scenes/splashscreen/SplashScreen.tscn"
-config/icon="res://icon.png"
+
+[autoload]
+
+GlobalMusic="*res://scenes/GlobalMusic.tscn"
 
 [display]
 
