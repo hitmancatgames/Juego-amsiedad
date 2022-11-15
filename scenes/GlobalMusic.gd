@@ -4,6 +4,8 @@ var MENU = load("res://assets/music/menu.ogg")
 var DEFAULT = load("res://assets/music/ambient.ogg")
 var PARTY = load("res://assets/music/party_music.ogg")
 
+var anxious
+
 var CountMusic = 0
 
 func _play_menu_music():
@@ -26,3 +28,6 @@ func _turn_down_volume():
 	
 func _turn_up_volume():
 	$Music.volume_db = +10
+
+func _anxious():
+	anxious = true

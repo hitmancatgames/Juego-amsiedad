@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/game-menu/MenuBackground.png" type="Texture" id=1]
 [ext_resource path="res://scenes/thanks/Thanks.gd" type="Script" id=2]
@@ -20,6 +20,146 @@ outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
 use_filter = true
 font_data = SubResource( 8 )
 
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cheems:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Mom:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 40, 644 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Dad:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 154, 911 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Floppa:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2172, 394 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Floppa:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Froid:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1065, 1245 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "idle"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Cheems:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 1.9, 2.4, 2.9, 3.4, 3.9, 4.3, 4.8, 5.3, 5.7, 6.2, 6.7, 7.2, 7.7, 8.1, 8.6, 9.1, 9.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6.0, -6.0, 6.0, -6.0, 6.0, -6.0, 6.0, -6.0, 6.0, -6.0, 6.0, -6.0, 6.0, -6.0, 6.0, -6.0, 6.0, -6.0, 6.0, -6.0, 6.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Mom:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 8.1, 8.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -242, 608 ), Vector2( -307, 608 ), Vector2( 40, 644 ), Vector2( 40, 644 ), Vector2( -307, 608 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Dad:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 8.1, 8.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -184, 870 ), Vector2( -272, 900 ), Vector2( 154, 911 ), Vector2( 154, 911 ), Vector2( -272, 900 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Froid:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.5, 7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1065, 1245 ), Vector2( 1081, 1092 ), Vector2( 1081, 1092 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Floppa:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 6.4, 9.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1874, 406 ), Vector2( 2217, 416 ) ]
+}
+
 [node name="Thanks" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
@@ -34,29 +174,34 @@ texture = ExtResource( 1 )
 position = Vector2( 960, 541 )
 texture = ExtResource( 6 )
 
+[node name="Floppa" type="Sprite" parent="."]
+position = Vector2( 2172, 394 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
 [node name="Text" type="Sprite" parent="."]
-position = Vector2( 500, 501 )
+position = Vector2( 801, 547 )
 texture = ExtResource( 3 )
 
 [node name="Cheems" type="Sprite" parent="."]
-position = Vector2( 781, 550 )
+position = Vector2( 1474, 568 )
+rotation = 0.10472
 texture = ExtResource( 4 )
 flip_h = true
 
+[node name="Mom" type="Sprite" parent="."]
+position = Vector2( 40, 644 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+flip_h = true
+
 [node name="Dad" type="Sprite" parent="."]
-position = Vector2( 1348, 446 )
+position = Vector2( 154, 911 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 
-[node name="Mom" type="Sprite" parent="."]
-position = Vector2( 1786, 518 )
-texture = ExtResource( 10 )
-
-[node name="Floppa" type="Sprite" parent="."]
-position = Vector2( 1310, 823 )
-texture = ExtResource( 8 )
-
 [node name="Froid" type="Sprite" parent="."]
-position = Vector2( 1744, 390 )
+position = Vector2( 1065, 1245 )
 texture = ExtResource( 5 )
 
 [node name="NpcCallIconBlack" type="TextureButton" parent="."]
@@ -80,5 +225,9 @@ custom_fonts/font = SubResource( 9 )
 text = ">>"
 align = 1
 valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 10 )
+anims/idle = SubResource( 11 )
 
 [connection signal="pressed" from="NpcCallIconBlack" to="." method="_on_NpcCallIconBlack_pressed"]
