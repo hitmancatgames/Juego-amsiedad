@@ -11,7 +11,7 @@ var animation = true
 
 func _ready():
 	GlobalMusic._play_default_music()
-	GlobalMusic._turn_up_volume()
+	GlobalMusic._turn_down_volume()
 	$DiaryVisibleQuote.play("fadeIN") 
 pass
 
