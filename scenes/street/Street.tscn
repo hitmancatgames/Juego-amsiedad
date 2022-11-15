@@ -20,17 +20,17 @@ outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
 use_filter = true
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.811765, 0.0313726, 0.0313726, 0.721569 )
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.764706, 0.576471, 0.34902, 0.807843 )
-
 [sub_resource type="DynamicFont" id=1]
 size = 40
 outline_color = Color( 0.152941, 0.152941, 0.152941, 1 )
 use_filter = true
 font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.811765, 0.0313726, 0.0313726, 0.721569 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.764706, 0.576471, 0.34902, 0.807843 )
 
 [node name="Street" type="Node2D" groups=["Street"]]
 script = ExtResource( 7 )
@@ -69,7 +69,7 @@ scale = Vector2( 1.00089, 1.74604 )
 shape = SubResource( 3 )
 
 [node name="Cheems" parent="." instance=ExtResource( 2 )]
-position = Vector2( 962, 612 )
+position = Vector2( 966, 694 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Label" type="Label" parent="."]
@@ -80,17 +80,6 @@ margin_bottom = 94.0
 custom_colors/font_color = Color( 0.137255, 0.133333, 0.133333, 1 )
 custom_fonts/font = SubResource( 4 )
 text = "BARRITA DE AMSIEDAD"
-
-[node name="AnxietyBar" type="ProgressBar" parent="." groups=["enemy"]]
-margin_left = 131.0
-margin_top = 73.0
-margin_right = 1786.0
-margin_bottom = 138.0
-custom_styles/fg = SubResource( 5 )
-custom_styles/bg = SubResource( 6 )
-max_value = 50.0
-rounded = true
-percent_visible = false
 
 [node name="AnxietyDialog" type="Sprite" parent="."]
 position = Vector2( 913.125, 862 )
@@ -108,38 +97,84 @@ bbcode_text = "[shake rate=5 level=10]¡Aaaaah! Hay mucha gemte aquí… Oh, esa
 text = "¡Aaaaah! Hay mucha gemte aquí… Oh, esa es… la profesora de matemáticas, espero que no me vea… ¡¡Qué amsiedadt!! "
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 8.0
 one_shot = true
 autostart = true
 
-[node name="Enemy" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 1249, -1250 )
+[node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy3" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 504, -2001 )
+[node name="Enemy" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1233, -178 )
 
-[node name="Enemy2" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 998, -2000 )
+[node name="Enemy3" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 495, -1109 )
 
-[node name="Enemy4" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 764, -3165 )
+[node name="Enemy2" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 982, -788 )
 
-[node name="Enemy5" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 1260, -5002 )
+[node name="Enemy4" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 744, -1555 )
+rotation = 1.47252
 
-[node name="Enemy6" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 773, -4146 )
+[node name="Enemy5" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1277, -2302 )
 
-[node name="Enemy7" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 997, -5876 )
+[node name="Enemy6" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 983, -1845 )
 
-[node name="Enemy8" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 501, -6209 )
+[node name="Enemy7" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 753, -2378 )
 
-[node name="Enemy9" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 748, -7520 )
+[node name="Enemy8" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1275, -3015 )
 
-[node name="Enemy10" parent="." groups=["enemy"] instance=ExtResource( 10 )]
-position = Vector2( 1256, -7731 )
+[node name="Enemy9" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 491, -3059 )
+
+[node name="Enemy10" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1001, -3304 )
+
+[node name="Enemy11" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 745, -3734 )
+
+[node name="Enemy12" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1277, -4381 )
+
+[node name="Enemy13" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 483, -4415 )
+
+[node name="Enemy14" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 993, -4660 )
+
+[node name="Enemy15" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 493, -4845 )
+
+[node name="Enemy16" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 742, -5291 )
+rotation = 1.47252
+
+[node name="Enemy17" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1245, -6214 )
+
+[node name="Enemy18" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 981, -5581 )
+
+[node name="Enemy19" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 741, -6462 )
+
+[node name="Enemy20" parent="Enemies" groups=["enemy"] instance=ExtResource( 10 )]
+position = Vector2( 1003, -7193 )
+
+[node name="AnxietyBar" type="ProgressBar" parent="." groups=["enemy"]]
+margin_left = 131.0
+margin_top = 73.0
+margin_right = 1786.0
+margin_bottom = 138.0
+custom_styles/fg = SubResource( 5 )
+custom_styles/bg = SubResource( 6 )
+rounded = true
+percent_visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="Cheems"]

@@ -23,6 +23,5 @@ func _physics_process(delta):
 
 
 func _on_Area2D_area_entered(area):
-	get_tree().call_group("Street","Anxiety")
-	print ("Floricienta")
+	get_tree().call_group("Street","_anxiety")
 	pass 
