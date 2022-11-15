@@ -149,7 +149,7 @@ texture_normal = ExtResource( 2 )
 position = Vector2( 971, 268 )
 frames = SubResource( 1 )
 animation = "change-name"
-frame = 10
+frame = 2
 playing = true
 
 [node name="Timer" type="Timer" parent="."]

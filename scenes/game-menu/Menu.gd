@@ -2,6 +2,7 @@ extends Node2D
 var animationON = false
 
 func _ready():
+	GlobalMusic._turn_down_volume()
 	if GlobalMusic.CountMusic == 0:
 		GlobalMusic._play_menu_music()
 	pass
